@@ -1,0 +1,40 @@
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    elif num <= 3:
+        return True
+    elif num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def main():
+    number = int(input("Enter a number: "))
+    print("Factorial of", number, "is", factorial(number))
+    print("Fibonacci sequence up to", number, "is:", end=" ")
+    for i in range(number):
+        print(fibonacci(i), end=" ")
+    print()
+    if is_prime(number):
+        print(number, "is a prime number.")
+    else:
+        print(number, "is not a prime number.")
+
+if __name__ == "__main__":
+    main()
