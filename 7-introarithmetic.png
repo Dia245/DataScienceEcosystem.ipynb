@@ -1,0 +1,36 @@
+### Below are a few examples of evaluating arithmetic expressions in Python.
+# Arithmetic operations
+code = compile("5 + 4", "<string>", "eval")
+eval(code)
+# Result: 9
+
+
+
+code1 = compile("(5 + 7) * 2", "<string>", "eval")
+eval(code1)
+# Result: 24
+
+
+
+import math
+# Volume of a sphere
+code2 = compile("4 / 3 * math.pi * math.pow(25, 3)", "<string>", "eval")
+eval(code2)
+# Result: 65449.84694978735
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
